@@ -1,0 +1,104 @@
+
+GET http://localhost:3000/books
+###
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+    "name": "First Book",
+    "author": "An Author"
+}
+###
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+    "name": "Second Book",
+    "author": "Another Author"
+}
+###
+
+DELETE http://localhost:3000/books
+Content-Type: application/json
+
+{
+    "name": "First Book",
+    "author": "An Author"
+}
+###
+
+PUT http://localhost:3000/books
+Content-Type: application/json
+
+{
+    "name": "Third Book",
+    "author": "Yet Another Author",
+    "index": 3
+}
+###
+###
+###
+###
+###
+GET http://localhost:3000/readers
+###
+POST http://localhost:3000/readers
+Content-Type: application/json
+
+{
+    "name": "Some Guy",
+    "readerId": 112222
+}
+###
+POST http://localhost:3000/readers
+Content-Type: application/json
+
+{
+    "name": "Another Guy",
+    "readerId": 123456
+}
+###
+DELETE http://localhost:3000/readers
+Content-Type: application/json
+
+{
+    "name": "Another Guy",
+    "readerId": 123456
+}
+###
+PUT http://localhost:3000/readers
+Content-Type: application/json
+
+{
+    "name": "Some Girl",
+    "readerId": 123456,
+    "deleted": false
+}
+###
+###
+###
+###
+###
+POST http://localhost:3000/getBook
+Content-Type: application/json
+
+{
+    "bookId": 1,
+    "readerId": 112222
+}
+###
+POST http://localhost:3000/getBook
+Content-Type: application/json
+
+{
+    "bookId": 2,
+    "readerId": 112222
+}
+###
+POST http://localhost:3000/returnBook
+Content-Type: application/json
+
+{
+    "bookId": 1,
+    "readerId": 112222
+}
